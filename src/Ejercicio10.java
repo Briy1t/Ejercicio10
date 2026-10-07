@@ -4,6 +4,7 @@ public class Ejercicio10 {
         final char[] LETTERS={'A','B','C','D','A','E','F','G','H','I','J','A','C','Z','Z','L','M','N','O','P'};
         int counter;
         int moda=0;
+        int freg=0;
 
     for (int i =0; i < LETTERS.length; i++){
         counter=0;
@@ -12,11 +13,12 @@ public class Ejercicio10 {
                     counter+=1;
                 }
             }
-            if (counter > moda) {
+            if (counter > freg) {
                 moda = i;
+                freg=counter;
             }
-            System.out.println("The first index:  "+LETTERS[i] + "  are replay "+ counter);
         }
+        System.out.println("The first index:  "+LETTERS[moda] + "  are replay "+ freg);
 
     }
 }
